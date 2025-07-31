@@ -26,15 +26,8 @@
         </nav>
         <div class="content1 ">
             <h1 class="  text-center text-light">Hello</h1>
-            <div class="wrapper d-inline-flex">
-                <div class="static text-light fs-1 fw-semibold">
-                    I am a
-                </div>
-                <ul class="dynamic">
-                    <li ><span>DEVELOPER</span></li>
-                    <li> <SPan> DESIGNER</SPan></li>
-                    <li><SPan >PROGRAMER</SPan></li>
-                </ul>
+           
+            <span id="element"> I am a</span>
                
             </div>
 
@@ -442,7 +435,21 @@
           
     </div>
     
- <script src="js/bootstrap.bundle.min.js"></script>
+ <script src="js/bootstrap.bundle.min.js">
+     <!-- Element to contain animated typing -->
+    <span id="element"></span
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Shahd Mohamed", "Developer", "Designer"],
+        typeSpeed: 50,
+
+        backSpeed: 50, // Speed of deleting
+        loop: true,
+      });
+    </script>
+ </script>
 
  </body>
 </html>
