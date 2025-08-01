@@ -24,15 +24,12 @@
               
             </div>
         </nav>
-        <div class="content1 ">
-            <h1 class="  text-center text-light">Hello</h1>
-           
-            <span id="element"> I am a</span>
-               
-            </div>
-
-           
-        </div>
+    <div class="content1">
+    <h1 class="text-center text-light">Hello</h1>
+    <p class="text-center text-light">
+      I am a <span id="element"></span>
+    </p>
+  </div>
         
     </div>
     <div class="page2 my-5 py-5 " id="page2">
@@ -435,21 +432,27 @@
           
     </div>
     
- <script src="js/bootstrap.bundle.min.js">
-     <!-- Element to contain animated typing -->
-    <span id="element"></span
+<!-- Scripts: load dependencies once -->
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/typed.min.js" defer></script>
 
-    <!-- Setup and start animation! -->
-    <script>
-      var typed = new Typed("#element", {
-        strings: ["Shahd Mohamed", "Developer", "Designer"],
-        typeSpeed: 50,
-
-        backSpeed: 50, // Speed of deleting
-        loop: true,
-      });
-    </script>
- </script>
+<!-- Initialization -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof Typed === "undefined") {
+      console.error("Typed.js not loaded. Check path to js/typed.min.js");
+      return;
+    }
+    new Typed("#element", {
+      strings: ["Shahd Mohamed", "Developer", "Designer"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|"
+    });
+  });
+</script>
 
  </body>
 </html>
